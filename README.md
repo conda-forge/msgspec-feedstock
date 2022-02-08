@@ -7,30 +7,22 @@ Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgspec-feedstock/blob/master/LICENSE.txt)
 
-Summary: A fast and friendly MessagePack implementation for Python
+Summary: A fast and friendly JSON/MessagePack library, with optional schema validation
 
 Development: https://github.com/jcrist/msgspec
 
 Documentation: https://jcristharif.com/msgspec/
 
-`msgspec` is a fast and friendly implementation of the MessagePack protocol
-for Python 3.8+. In addition to serialization/deserialization, it supports
-runtime message validation using schemas defined via Python's type
-annotations.
+`msgspec` is a fast and friendly serialization library for Python,
+supporting both JSON and MessagePack. It integrates well with Python's type
+annotations, providing ergonomic (and performant!) schema validation.
 
 
 Current build status
 ====================
 
 
-<table><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/conda-forge/msgspec-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/msgspec-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr>
+<table>
     
   <tr>
     <td>Azure</td>

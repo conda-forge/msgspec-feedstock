@@ -1,5 +1,5 @@
 {% set name = "msgspec" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 75d05c1d58e46202b8ac4d833532783fa946824e0e04cb6a5650e3cfc9a486ca
-  patches:
-      - patches/0001-fix-windows-310-build.patch
+  sha256: 850fe1e72ec5362b06b2053f860e1c4552fa6402ee80a93c496f357843a3b77f
 
 build:
   number: 0

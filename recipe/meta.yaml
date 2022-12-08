@@ -1,5 +1,5 @@
 {% set name = "msgspec" %}
-{% set version = "0.10.0" %}
+{% set version = "0.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ed9d7eb961af8ad8629ffcf63f781cc5afb0d674207ab9260ec5590ff359042
+  sha256: 770c29c5bf227f1c5e3bd0f82ecea313b74772763997c2a5d0ff1375c7e4e1db
 
 build:
   number: 0

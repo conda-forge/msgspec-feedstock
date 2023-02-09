@@ -36,7 +36,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - {{ pin_subpackage(name) }}
+        - msgspec {{ version }}
         - pyyaml
     test:
       imports:
@@ -46,7 +46,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - {{ pin_subpackage(name) }}
+        - msgspec {{ version }}
         - tomli    # [py<311]
         - tomli-w  # [py<311]
     test:

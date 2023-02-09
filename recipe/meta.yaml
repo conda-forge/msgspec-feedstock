@@ -1,5 +1,5 @@
 {% set name = "msgspec" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,38 +7,65 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d8fe529a2414a1a5d3ccb1e875b164cc4f56614750c7b27c85006808f5658489
+  sha256: c89bbc5b82f1370165593ed28c8ce9dfa71869666ed8ba3af900b3465d379545
 
 build:
   number: 0
-  skip: true  # [py<38]
-  script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - {{ compiler('c') }}
-  host:
-    - python
-    - pip
-  run:
-    - python
+outputs:
+  - name: msgspec
+    version: {{ version }}
+    build:
+      skip: true  # [py<38]
+      script: {{ PYTHON }} -m pip install . -vv
+    requirements:
+      build:
+        - python                                 # [build_platform != target_platform]
+        - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+        - {{ compiler('c') }}
+      host:
+        - python
+        - pip
+      run:
+        - python
+    test:
+      imports:
+        - msgspec
 
-test:
-  imports:
-    - msgspec
+  - name: msgspec-yaml
+    version: {{ version }}
+    requirements:
+      run:
+        - {{ pin_subpackage(name) }}
+        - pyyaml
+    test:
+      imports:
+        - msgspec
+
+  - name: msgspec-toml
+    version: {{ version }}
+    requirements:
+      run:
+        - {{ pin_subpackage(name) }}
+        - tomli    # [py<311]
+        - tomli-w  # [py<311]
+    test:
+      imports:
+        - msgspec
 
 about:
   home: https://jcristharif.com/msgspec/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: A fast and friendly JSON/MessagePack library, with optional schema validation
+  summary: |
+    A fast serialization and validation library, with builtin support for JSON,
+    MessagePack, YAML, and TOML.
   description: |
-    `msgspec` is a fast and friendly serialization library for Python,
-    supporting both JSON and MessagePack. It integrates well with Python's type
-    annotations, providing ergonomic (and performant!) schema validation.
+    `msgspec` is a fast serialization and validation library for Python,
+    supporting JSON, MessagePack, YAML, and TOML. It integrates well with
+    Python's type annotations, providing ergonomic (and performant!) schema
+    validation.
   doc_url: https://jcristharif.com/msgspec/
   dev_url: https://github.com/jcrist/msgspec
 

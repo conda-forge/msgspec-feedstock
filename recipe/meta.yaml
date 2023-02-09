@@ -17,7 +17,7 @@ outputs:
     version: {{ version }}
     build:
       skip: true  # [py<38]
-      script: {{ PYTHON }} -m pip install . -vv
+      script: python -m pip install . -vv
     requirements:
       build:
         - python                                 # [build_platform != target_platform]
@@ -36,7 +36,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - msgspec {{ version }}
+        - {{ pin_subpackage(name) }}
         - pyyaml
     test:
       imports:
@@ -46,7 +46,7 @@ outputs:
     version: {{ version }}
     requirements:
       run:
-        - msgspec {{ version }}
+        - {{ pin_subpackage(name) }}
         - tomli    # [py<311]
         - tomli-w  # [py<311]
     test:

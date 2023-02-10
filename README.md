@@ -7,7 +7,9 @@ Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgspec-feedstock/blob/main/LICENSE.txt)
 
-Summary: A fast serialization and validation library, with builtin support for JSON, MessagePack, YAML, and TOML.
+Summary: A fast serialization and validation library, with builtin support for JSON,
+MessagePack, YAML, and TOML.
+
 
 Development: https://github.com/jcrist/msgspec
 
@@ -218,6 +220,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-msgspec-green.svg)](https://anaconda.org/conda-forge/msgspec) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgspec.svg)](https://anaconda.org/conda-forge/msgspec) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgspec.svg)](https://anaconda.org/conda-forge/msgspec) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgspec.svg)](https://anaconda.org/conda-forge/msgspec) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-msgspec--toml-green.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-msgspec--yaml-green.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) |
 
 Installing msgspec
 ==================
@@ -229,16 +233,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `msgspec` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `msgspec, msgspec-toml, msgspec-yaml` can be installed with `conda`:
 
 ```
-conda install msgspec
+conda install msgspec msgspec-toml msgspec-yaml
 ```
 
 or with `mamba`:
 
 ```
-mamba install msgspec
+mamba install msgspec msgspec-toml msgspec-yaml
 ```
 
 It is possible to list all of the versions of `msgspec` available on your platform with `conda`:

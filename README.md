@@ -1,11 +1,11 @@
-About msgspec
-=============
+About msgspec-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgspec-feedstock/blob/main/LICENSE.txt)
 
 Home: https://jcristharif.com/msgspec/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgspec-feedstock/blob/main/LICENSE.txt)
 
 Summary: A fast serialization and validation library, with builtin support for JSON,
 MessagePack, YAML, and TOML.

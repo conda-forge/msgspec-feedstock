@@ -10,7 +10,7 @@ source:
   sha256: a59fc3b4fcdb972d09138cb516dbde600c99d07c38fd9372a6ef500d2d031b4e
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: msgspec
@@ -23,6 +23,7 @@ outputs:
         - python                                 # [build_platform != target_platform]
         - cross-python_{{ target_platform }}     # [build_platform != target_platform]
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
       host:
         - python
         - pip

@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: a59fc3b4fcdb972d09138cb516dbde600c99d07c38fd9372a6ef500d2d031b4e
 
 build:
@@ -27,6 +27,7 @@ outputs:
       host:
         - python
         - pip
+        - setuptools
       run:
         - python
     test:

@@ -27,6 +27,7 @@ outputs:
       host:
         - python
         - pip
+        - setuptools
       run:
         - python
     test:

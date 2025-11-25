@@ -33,6 +33,10 @@ outputs:
     test:
       imports:
         - msgspec
+      commands:
+        - pip check
+        - python -c "from importlib.metadata import version; print(version('{{ name }}'))"
+        - python -c "from importlib.metadata import version; print(version('{{ name }}'))" | grep {{ version }}
 
   - name: msgspec-yaml
     version: {{ version }}

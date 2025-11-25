@@ -31,6 +31,9 @@ outputs:
       run:
         - python
     test:
+      requires:
+        - pip
+        - python
       imports:
         - msgspec
       commands:

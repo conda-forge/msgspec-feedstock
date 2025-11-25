@@ -26,8 +26,9 @@ outputs:
         - {{ stdlib("c") }}
       host:
         - python
+        - setuptools >=80
+        - setuptools-scm >=8
         - pip
-        - setuptools
       run:
         - python
     test:

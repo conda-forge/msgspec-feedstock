@@ -1,5 +1,5 @@
-About msgspec-feedstock
-=======================
+About msgspec-split-feedstock
+=============================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgspec-feedstock/blob/main/LICENSE.txt)
 
@@ -97,10 +97,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-msgspec--toml-green.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgspec-toml.svg)](https://anaconda.org/conda-forge/msgspec-toml) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-msgspec--yaml-green.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgspec-yaml.svg)](https://anaconda.org/conda-forge/msgspec-yaml) |
 
-Installing msgspec
-==================
+Installing msgspec-split
+========================
 
-Installing `msgspec` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `msgspec-split` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -186,17 +186,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating msgspec-feedstock
-==========================
+Updating msgspec-split-feedstock
+================================
 
-If you would like to improve the msgspec recipe or build a new
+If you would like to improve the msgspec-split recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/msgspec-feedstock are
+Note that all branches in the conda-forge/msgspec-split-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks, and branches in the main repository should only be used to
 build distinct package versions.

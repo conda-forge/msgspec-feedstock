@@ -2,7 +2,7 @@
 {% set version = "0.20.0" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name|lower }}-split
   version: {{ version }}
 
 source:
@@ -10,7 +10,7 @@ source:
   sha256: 692349e588fde322875f8d3025ac01689fead5901e7fb18d6870a44519d62a29
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: msgspec
@@ -26,13 +26,21 @@ outputs:
         - {{ stdlib("c") }}
       host:
         - python
+        - setuptools >=80
+        - setuptools-scm >=8
         - pip
-        - setuptools
       run:
         - python
     test:
+      requires:
+        - pip
+        - python
       imports:
         - msgspec
+      commands:
+        - pip check
+        - python -c "from importlib.metadata import version; print(version('{{ name }}'))"
+        - python -c "from importlib.metadata import version; assert '{{ version }}' == version('{{ name }}')"
 
   - name: msgspec-yaml
     version: {{ version }}

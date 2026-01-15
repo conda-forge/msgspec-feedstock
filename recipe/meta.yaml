@@ -10,7 +10,7 @@ source:
   sha256: 692349e588fde322875f8d3025ac01689fead5901e7fb18d6870a44519d62a29
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: msgspec

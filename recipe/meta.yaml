@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2313508e394b0d208f8f56892ca9b2799e2561329de9763b19619595a6c0f72c
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: msgspec
